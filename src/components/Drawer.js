@@ -1,28 +1,24 @@
-const Drawer = () => {
+const Drawer = ({onClose, items =[] }) => {
   return (
-    <div style={{ display: 'none' }} className="overlay">
+    <div className="overlay">
       <div className="drawer">
         <div className="drawer__cart-title">
           <h2 className="drawer__cart">Корзина</h2>
-          <img className="drawer__cart-remove" width={32} height={32} src="/img/remove.svg" alt="remove" />
+          <img onClick={onClose} className="drawer__cart-remove" width={32} height={32} src="/img/remove.svg" alt="close" />
         </div>
         <div className="drawer__cart-items">
-          <div className="drawer__cart-item">
-            <img className="drawer__cart-img" width={70} height={70} src="/img/sneakers/sn1.jpg" alt="sneakers" />
-            <div className="drawer__cart-info">
-              <p className="drawer__cart-name">Мужские Кроссовки Nike Air Max 270</p>
-              <b className="drawer__cart-prise">12 999 руб.</b>
+          {items.map((obj) => (
+            <div className="drawer__cart-item">
+              <div style={{backgroundImage: `url(${obj.imageUrl})`}}
+              className="cartItemImg"></div>              
+              <div className="drawer__cart-info">
+                <p className="drawer__cart-name">{obj.title}</p>
+                <b className="drawer__cart-prise">{obj.price}</b>
+              </div>
+              <img className="drawer__cart-remove" src="/img/remove.svg" alt="remove" />
             </div>
-            <img className="drawer__cart-remove" src="/img/remove.svg" alt="remove" />
-          </div>
-          <div className="drawer__cart-item">
-            <img className="drawer__cart-img" width={70} height={70} src="/img/sneakers/sn1.jpg" alt="sneakers" />
-            <div className="drawer__cart-info">
-              <p className="drawer__cart-name">Мужские Кроссовки Nike Air Max 270</p>
-              <b className="drawer__cart-prise">12 999 руб.</b>
-            </div>
-            <img className="drawer__cart-remove" src="/img/remove.svg" alt="remove" />
-          </div>
+          ))}
+
         </div>
         <ul className="cart__block">
           <li className="item">

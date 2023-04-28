@@ -1,4 +1,4 @@
-const Shapka = () => {
+const Shapka = (props) => {
   return ( 
     <header>
         <div className="headerLeft">
@@ -8,11 +8,10 @@ const Shapka = () => {
             <p>магазин лучших кросовок</p>
           </div>
         </div>
-        <div>
-          <ul className="headerRight">
-            <li>
+        <div className="headerRight">
+          <ul>
+            <li onClick={props.onClickCart}>
               <img src="/img/cart.svg" alt="" />
-
               <span>1205 руб.</span>
             </li>
             <li>
