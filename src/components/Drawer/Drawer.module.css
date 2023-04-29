@@ -1,0 +1,123 @@
+/* корзина с товаром */
+.overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.drawer {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 420px;
+  height: 93vh;
+  right: 0;
+  background-color: #fff;
+  box-shadow: -10px 4px 24px rgba(0, 0, 0, 0.01);
+  padding: 30px;
+}
+.top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.title {
+  margin: 0;
+}
+.close {
+  opacity: 0.5;
+  transition: opacity 0.15s ease-in-out;
+  cursor: pointer;
+}
+.close:hover {
+  opacity: 1;
+}
+.items {
+  flex: 1;
+  overflow: auto;
+}
+/* карточка товара */
+.item {
+  display: flex;
+  align-items: center;
+  border: 1px solid #f3f3f3;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+.info {
+  margin: 10px;
+  font-size: 14px;
+}
+.name {
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+
+
+
+
+/* пустая корзина */
+.empty {
+  margin-top: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.emptyParagraph {
+  text-align: center;
+}
+.emptyButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 245px;
+  margin-top: 20px;
+}
+.emptyButton:hover img {
+  transform: translateX(-3px);
+}
+.buttonImg {
+  position: relative;
+  top: 1px;
+  margin-right: 15px;
+  transition: transform 0.15s ease-in-out;
+}
+
+/* итого */
+.itogo{
+  margin-bottom: 25px;
+}
+.line{
+  flex: 1;
+  height: 1;
+  border-bottom: 1px solid #dfdfdf;
+  position: relative;
+  top: -4px;
+  margin: 0 10px;
+}
+
+.li {
+  display: flex;
+}
+
+
+/* нижняя кнопка */
+.drawer button {
+  width: 100%;
+  height: 55px;
+  background: #9DD558;
+  border-radius: 18px;
+  border: 0;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+}

@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import Card from './components/Card/Card';
-import Drawer from './components/Drawer';
+import Drawer from './components/Drawer/Drawer';
 import Shapka from './components/Header';
 
 function App() {
