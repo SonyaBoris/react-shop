@@ -1,19 +1,17 @@
 import React from 'react';
 import s from './Card.module.css';
 
-const Card = ({onLike, title, imageUrl, price, onPlus}) => {
+const Card = ({ title, imageUrl, price, onPlus }) => {
   const [isAdded, setIsAdded] = React.useState(false);
-
+  
   const onClickPlus = () => {
-    onPlus({title, imageUrl, price})
+    onPlus({title, imageUrl, price })
     setIsAdded(!isAdded);
   }
 
+
   return (
-    <div className={s.card}>
-      <div className={s.like} onClick={onLike}>
-        <img src="/img/unlike.svg" alt="unlike" />
-      </div>
+    <div className={s.card}>      
       <img width={133} height={112} src={imageUrl} alt="sneakers" />
       <h5>{title}</h5>
       <div className={s.bottom}>
