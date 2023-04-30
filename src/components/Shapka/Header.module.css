@@ -1,0 +1,46 @@
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid #000;
+  padding: 10px 0;
+}
+img {
+  margin-right: 15px;
+}
+
+ul {
+  display: flex;
+}
+li {
+  display: flex;
+  align-items: center;  
+  cursor: pointer;
+  list-style: none;
+  padding-right: 15px;  
+}
+span{
+  opacity: 70%;
+}
+
+@media (max-width:1110px){
+  li{
+    padding: 0;    
+  }
+  img {
+    margin: 10px;
+  }  
+}
+@media (max-width:588px){
+  header{
+    padding: 0;
+  }
+  h3,
+  span{
+    display: none;
+  }
+  ul{
+    padding: 0;
+  }
+  
+}

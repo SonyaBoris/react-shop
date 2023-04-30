@@ -11,9 +11,12 @@ const Card = ({ title, imageUrl, price, onPlus }) => {
 
 
   return (
-    <div className={s.card}>      
-      <img width={133} height={112} src={imageUrl} alt="sneakers" />
+    <div className={s.card}>
+      <div className={s.imgName}>
+        <img width={133} height={112} src={imageUrl} alt="sneakers" />
       <h5>{title}</h5>
+        </div>      
+      
       <div className={s.bottom}>
         <div className="prise">
           <p>Цена:</p>

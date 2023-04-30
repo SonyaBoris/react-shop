@@ -16,7 +16,7 @@ const Drawer = ({ onClose, onRemove, items = [] }) => {
             <>
               <div className={s.items}>
                 {items.map((obj) => (
-                  <div key={obj.id} className={s.item}>                    
+                  <div key={obj.id} className={s.item}>                                     
                     <img width={113} height={92} src={obj.imageUrl} alt="кросовки" />                    
                     <div className={s.info}>
                       <p className={s.name}>{obj.title}</p>
@@ -26,24 +26,19 @@ const Drawer = ({ onClose, onRemove, items = [] }) => {
                   </div>
                 ))}
               </div>
-              <ul className={s.itogo}>
-                <li className={s.li}>
-                  <span>Итого :</span>
+              <div className={s.itogo}>
+                 <span>Итого :</span>
                   <div className={s.line}></div>
                   <b>21 498 руб.</b>
-                </li>
-                <li className={s.li}>
-                  <span>Налог 5% :</span>
-                  <div className={s.line}></div>
-                  <b>1074 руб.</b>
-                </li>
-              </ul>
+              </div>
+                 
+                
               <button>Оформить заказ</button>
             </>
 
           ) : (
             <div className={s.empty}>
-              <img src="/img/emptyCart.jpg" alt="пустая корзина" />
+              <img src="/img/cart.svg" alt="пустая корзина" width={50}/>
               <h2>Корзина пустая</h2>
               <p className={s.emptyParagraph}>Добавьте хотя бы одну пару кроссовок, чтобы сделать заказ.</p>
               <button onClick={onClose} className={s.emptyButton}>

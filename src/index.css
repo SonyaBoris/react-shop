@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+body {
+  margin: 0; 
+  background-color: #E6E6E6;
+}
+
+* {
+  font-family: "Montserrat", sans-serif;
+}
+:root{
+  --index: calc(1vw + 1vh);
+}
+.wrapper {
+  background-color: #fff;  
+  border: 1px solid #000;
+  max-width: 1080px;
+  margin: 50px auto;
+  padding: 20px;
+
+  
+}
+
+/* заголовок и окно поиска */
+.content__title{
+  font-size: calc(var(--index)*1.5);
+}
+.content {
+  margin-bottom: 40px;
+}
+.content__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 0;
+  
+}
+
+/* окно поиска */
+.search {
+  display: flex;
+  border: 1px solid #000;    
+  position: relative;
+  width: calc(var(--index)*15);
+}
+input {
+  border: 0;
+  padding: 10px;
+  font-size: 14px;
+  width: calc(var(--index)*5);
+  outline:none;
+  
+
+  
+}
+.search__clear {
+  top: 7px;
+  position: absolute;
+  right: 0;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  margin: 0 7px;
+}
+.imgSearch{
+  margin-left: 10px;
+}
+
+/* блок с карточками товаров */
+.sneakers {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@media (max-width:1120px){
+  .wrapper{
+    margin: 0;
+  }
+}
+
+
