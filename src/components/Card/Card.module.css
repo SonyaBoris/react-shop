@@ -54,3 +54,42 @@ b {
   width: 32px;
   cursor: pointer;
 }
+
+@media (max-width: 827px){
+  .card{
+    width: 180px;
+  }
+}
+@media (max-width: 485px){
+  .card{
+    display: flex;
+    justify-content: space-between;
+    width: 400px;   
+    padding: 0; 
+  }
+  .imgName{
+    display: flex;
+    flex-direction: row;
+  }
+  .imgName img{
+    width: 106px;
+    height: 100px;
+    margin-right: 5px;
+  }
+  .bottom{
+    margin-left: 5px;
+  }
+  .plus{
+    margin: 0 7px;    
+  }
+  h5{
+    font-size: 14px;
+    max-width: 165px;
+    margin: 0;
+  }
+
+  b{
+    font-size: 12px;    
+  }
+  
+}

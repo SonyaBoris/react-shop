@@ -19,7 +19,7 @@ function App() {
     });
   }, []);
 
-  const onAddToCart = async (obj) => {     
+  const onAddToCart = async (obj) => {
     try {
       const findItem = cartItems.find((item) => Number(item.parentId) === Number(obj.id));
       if (findItem) {
@@ -55,15 +55,13 @@ function App() {
     setSearchValue(event.target.value);
   };
 
- 
-
   return (
     <div className="wrapper">
       {cartOpened ? <Drawer items={cartItems} onClose={() => setCartOpened(false)} onRemove={onRemoveItem} /> : null}
 
-      <Shapka onClickCart={() => setCartOpened(true)} />     
+      <Shapka onClickCart={() => setCartOpened(true)} />
 
-      <div className="content">
+      <main className="content">
         <div className="content__top">
           <h1 className="content__title"> {searchValue ? `Поиск по запросу: "${searchValue}"` : 'Все кросовки'} </h1>
           <div className="search">
@@ -73,24 +71,23 @@ function App() {
               src="/img/remove.svg"
               alt="clear" />}
             <img className="imgSearch" src="/img/search.svg" alt="search" />
-            <input onChange={onChangeSearchInput} value={searchValue} placeholder="Поиск..."  />
+            <input onChange={onChangeSearchInput} value={searchValue} placeholder="Поиск..." />
           </div>
         </div>
-
-        <div className="sneakers">
+        <section className="sneakers">
           {items
-          .filter((item) => item.title.toLowerCase().includes(searchValue))
-          .map((item, index) => (
-            <Card
-              key={index}
-              title={item.title}
-              price={item.price}
-              imageUrl={item.imageUrl}             
-              onPlus={(obj) => onAddToCart(obj)}
-            />
-          ))}
-        </div>
-      </div>
+            .filter((item) => item.title.toLowerCase().includes(searchValue))
+            .map((item, index) => (
+              <Card
+                key={index}
+                title={item.title}
+                price={item.price}
+                imageUrl={item.imageUrl}
+                onPlus={(obj) => onAddToCart(obj)}
+              />
+            ))}
+        </section>
+      </main>
     </div>
   );
 }
