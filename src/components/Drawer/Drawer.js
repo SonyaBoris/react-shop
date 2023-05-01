@@ -7,7 +7,7 @@ const Drawer = ({ onClose, onRemove, items = [] }) => {
       <section className={s.drawer}>
         <div className={s.top}>
           <h2 className={s.title}>Корзина</h2>
-          <img onClick={onClose} className={s.close} width={32} height={32} src="/img/remove.svg" alt="закрыть корзину" />
+          <img onClick={onClose} className={s.close} width={32} height={32} src="img/remove.svg" alt="закрыть корзину" />
         </div>
         {
           items.length > 0 ? (
@@ -20,7 +20,7 @@ const Drawer = ({ onClose, onRemove, items = [] }) => {
                       <p className={s.name}>{obj.title}</p>
                       <b className={s.price}>{obj.price}</b>
                     </div>
-                    <img onClick={() => onRemove(obj.id)} className={s.close} src="/img/remove.svg" alt="remove" />
+                    <img onClick={() => onRemove(obj.id)} className={s.close} src="img/remove.svg" alt="remove" />
                   </div>
                 ))}
               </div>
@@ -29,11 +29,11 @@ const Drawer = ({ onClose, onRemove, items = [] }) => {
 
           ) : (
             <div className={s.empty}>
-              <img src="/img/cart.svg" alt="пустая корзина" width={50} />
+              <img src="img/cart.svg" alt="пустая корзина" width={50} />
               <h2>Корзина пустая</h2>
               <p className={s.emptyParagraph}>Добавьте хотя бы одну пару кроссовок, чтобы сделать заказ.</p>
               <button onClick={onClose} className={s.emptyButton}>
-                <img className={s.buttonImg} src="/img/vectorL.svg" alt="вернуться назад" />
+                <img className={s.buttonImg} src="img/vectorL.svg" alt="вернуться назад" />
                 <div>Вернуться назад</div>
               </button>
             </div>

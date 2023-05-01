@@ -68,9 +68,9 @@ function App() {
             {searchValue && <img
               onClick={() => setSearchValue('')}
               className="search__clear"
-              src="/img/remove.svg"
+              src="img/remove.svg"
               alt="clear" />}
-            <img className="imgSearch" src="/img/search.svg" alt="search" />
+            <img className="imgSearch" src="img/search.svg" alt="search" />
             <input onChange={onChangeSearchInput} value={searchValue} placeholder="Поиск..." />
           </div>
         </div>
